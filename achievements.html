@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Achievements - Teacher Shen's Piano Studio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <nav>
+        <button type="button" class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+            <span class="waffle-icon" aria-hidden="true">
+                <span></span><span></span><span></span>
+                <span></span><span></span><span></span>
+                <span></span><span></span><span></span>
+            </span>
+        </button>
+        <div class="nav-links" id="nav-links">
+            <a href="index.html" data-en="Home / About" data-zh="首页 / 关于老师">Home / About</a>
+            <a href="lessons.html" data-en="Lessons & Pricing" data-zh="课程与价格">Lessons & Pricing</a>
+            <a href="achievements.html" data-en="Achievements" data-zh="学生成绩">Achievements</a>
+            <a href="recitals.html" data-en="Recitals" data-zh="音乐会">Recitals</a>
+        </div>
+        <button id="lang-toggle" onclick="toggleLanguage()">中文</button>
+    </nav>
+
+    <div class="container">
+        <section id="achievements">
+            <h2 data-en="Student RCM & Competition Results" data-zh="学生考级与比赛成绩">Student RCM & Competition Results</h2>
+            <p data-en="A showcase of past students' hard work and dedication." data-zh="展示历届学生的努力与坚持。">A showcase of
+                past students' hard work and dedication.</p>
+
+            <div class="gallery-grid">
+                <div class="gallery-item"><img src="Pictures/pic1.png" alt="Student achievement photo 1" loading="lazy">
+                </div>
+                <div class="gallery-item"><img src="Pictures/pic2.png" alt="Student achievement photo 2" loading="lazy">
+                </div>
+                <div class="gallery-item"><img src="Pictures/pic3.png" alt="Student achievement photo 3" loading="lazy">
+                </div>
+                <div class="gallery-item"><img src="Pictures/pic4.png" alt="Student achievement photo 4" loading="lazy">
+                </div>
+                <div class="gallery-item"><img src="Pictures/pic5.png" alt="Student achievement photo 5" loading="lazy">
+                </div>
+                <div class="gallery-item"><img src="Pictures/pic6.png" alt="Student achievement photo 6" loading="lazy">
+                </div>
+                <div class="gallery-item"><img src="Pictures/pic7.png" alt="Student achievement photo 7" loading="lazy">
+                </div>
+                <div class="gallery-item"><img src="Pictures/pic8.png" alt="Student achievement photo 8" loading="lazy">
+                </div>
+                <div class="gallery-item"><img src="Pictures/pic9.png" alt="Student achievement photo 9" loading="lazy">
+                </div>
+                <div class="gallery-item"><img src="Pictures/comp1.png" alt="Competition award 1" loading="lazy"></div>
+                <div class="gallery-item"><img src="Pictures/comp2.png" alt="Competition award 2" loading="lazy"></div>
+                <div class="gallery-item"><img src="Pictures/comp3.png" alt="Competition award 3" loading="lazy"></div>
+                <div class="gallery-item"><img src="Pictures/comp4.png" alt="Competition award 4" loading="lazy"></div>
+                <div class="gallery-item"><img src="Pictures/comp5.png" alt="Competition award 5" loading="lazy"></div>
+                <div class="gallery-item"><img src="Pictures/comp6.png" alt="Competition award 6" loading="lazy"></div>
+                <div class="gallery-item"><img src="Pictures/comp7.png" alt="Competition award 7" loading="lazy"></div>
+                <div class="gallery-item"><img src="Pictures/results1.png" alt="Competition results 1" loading="lazy">
+                </div>
+                <div class="gallery-item"><img src="Pictures/results2.png" alt="Competition results 2" loading="lazy">
+                </div>
+                <div class="gallery-item"><img src="Pictures/results3.png" alt="Competition results 3" loading="lazy">
+                </div>
+                <div class="gallery-item"><img src="Pictures/results4.png" alt="Competition results 4" loading="lazy">
+                </div>
+                <div class="gallery-item"><img src="Pictures/results5.png" alt="Competition results 5" loading="lazy">
+                </div>
+                <div class="gallery-item"><img src="Pictures/results6.png" alt="Competition results 6" loading="lazy">
+                </div>
+                <div class="gallery-item"><img src="Pictures/results7.png" alt="Competition results 7" loading="lazy">
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <div class="lightbox-overlay" id="lightbox-overlay">
+        <button type="button" class="lightbox-close" id="lightbox-close" aria-label="Close">&times;</button>
+        <button type="button" class="lightbox-nav lightbox-prev" id="lightbox-prev"
+            aria-label="Previous image">&#10094;</button>
+        <img src="" alt="" id="lightbox-image">
+        <button type="button" class="lightbox-nav lightbox-next" id="lightbox-next"
+            aria-label="Next image">&#10095;</button>
+    </div>
+
+    <footer>
+        <h2 style="color: white; margin-top: 0;" data-en="Contact Teacher Shen" data-zh="联系沈老师">Contact Teacher Shen
+        </h2>
+        <p><strong data-en="Phone/Message:" data-zh="电话/短信:">Phone/Message:</strong> 647-205-5196</p>
+        <p><strong data-en="Location:" data-zh="地址:">Location:</strong> Bayview Ave and Stouffville Rd</p>
+
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="lightbox.js"></script>
+</body>
+
+</html>
