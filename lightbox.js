@@ -7,7 +7,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (!overlay || !overlayImg || !closeBtn) return;
 
-    const images = Array.from(document.querySelectorAll('.gallery-item img'));
+    const caption = document.getElementById('lightbox-caption');
+    let images = [];
     let currentIndex = -1;
 
     function showImage(index) {
@@ -16,6 +17,16 @@ document.addEventListener('DOMContentLoaded', () => {
         const img = images[currentIndex];
         overlayImg.src = img.src;
         overlayImg.alt = img.alt || '';
+
+        if (!caption) return;
+        const label = img.closest('.gallery-item')?.querySelector('.gallery-caption');
+        const en = label?.getAttribute('data-en') || '';
+        const zh = label?.getAttribute('data-zh') || '';
+        caption.setAttribute('data-en', en);
+        caption.setAttribute('data-zh', zh);
+        const lang = localStorage.getItem('studioLang') || 'en';
+        caption.innerHTML = lang === 'zh' ? zh : en;
+        caption.hidden = !en && !zh;
     }
 
     function openLightbox(index) {
@@ -27,10 +38,15 @@ document.addEventListener('DOMContentLoaded', () => {
         overlay.classList.remove('open');
         overlayImg.src = '';
         currentIndex = -1;
+        if (caption) caption.hidden = true;
     }
 
-    images.forEach((img, index) => {
-        img.addEventListener('click', () => openLightbox(index));
+    document.querySelectorAll('.gallery-item img').forEach(img => {
+        img.addEventListener('click', () => {
+            const grid = img.closest('.gallery-grid');
+            images = Array.from((grid || document).querySelectorAll('.gallery-item img'));
+            openLightbox(images.indexOf(img));
+        });
     });
 
     closeBtn.addEventListener('click', closeLightbox);
